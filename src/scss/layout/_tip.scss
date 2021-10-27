@@ -1,0 +1,37 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.tip {
+    margin-top: 2rem;
+    background-color: v.$very_dark_cyan;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    button {
+        background-color: v.$cyan_easy;
+        color: v.$cyan;
+        min-width: 95%;
+        &:hover {
+            background-color: v.$cyan;
+            color: v.$very_dark_cyan;
+        }
+    }
+    h3 {
+        color: v.$white;
+    }
+    .tip-row {
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #tip-amount,
+    #tip-total {
+        margin: 0;
+        font-weight: 900;
+        font-size: 3rem;
+        color: v.$strong_cyan;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="stylesheet" href="/build/css/app.css">
+
+	<title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+	<h1>Spli<br>tter</h1>
+
+	<main class="container" >
+		<section class="" action="">
+			<h2>Bill</h2>
+			<div class="input">
+				<img src="/build/img/icon-dollar.svg" alt="">
+				<input id="money" value="0" type="number" min="0">
+			</div>
+
+			<h2>Number of People</h2>
+			<div class="input">
+				<img src="/build/img/icon-person.svg" alt="">
+				<input id="persons" value="0" type="number" min="0">
+			</div>
+			<h2>Select Tip %</h2>
+
+			<div class="btns">
+				<button class="btn" onclick="calculate(this.id)" id="1" value="0.05">5%</button>
+				<button class="btn" onclick="calculate(this.id)" id="2" value="0.10">10%</button>
+				<button class="btn" onclick="calculate(this.id)" id="3" value="0.15">15%</button>
+				<button class="btn" onclick="calculate(this.id)" id="4" value="0.25">25%</button>
+				<button class="btn" onclick="calculate(this.id)" id="5" value="0.50">50%</button>
+				<input onclick="custom()" onchange="bill((this.value) / 100)" type="text" name="Custom-tip" value="Custom" id="custom">
+			</div>
+
+			
+		</section>
+
+		<aside class="tip" onclick="resetCustom()">
+			<div>
+				<div class="tip-row" >
+					<div>
+						<h3>Tip Amount </h3>
+						<p>/ person</p>
+					</div>
+					<p id="tip-amount">$0.00</p>
+				</div>
+	
+				<div class="tip-row">
+					<div>
+						<h3>Total</h3>
+						<p>/ person</p>
+					</div>
+					<p id="tip-total">$0.00</p>
+				</div>
+			</div>
+
+			<!-- <button id="calculate">Calculate</button> -->
+			<button onclick="reset()">Reset</button>
+		</aside>
+	</main>
+
+	<footer class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="#">Donovan Eliosa</a>.
+	</footer>
+
+	<script src="/build/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.btns {
+    @include m.grid(3,1rem);
+    max-width: 30rem;
+    margin: 0;
+    .check {
+        background-color: v.$strong_cyan;
+    }
+    #custom {
+        z-index: 1;
+        font-size: 2rem;
+        max-width: 9rem;
+        color: v.$dark_grayish_cyan_two;
+        text-align: center;
+        &:hover {
+            color: v.$very_dark_cyan;
+            border: .1rem solid v.$strong_cyan;
+            border-radius: 1rem;
+        }
+    }
+}
+button {
+    cursor: pointer;
+    border-style: none;
+    border-radius: .5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+    margin: 0 auto;
+    min-width: 9rem;
+    background-color: v.$very_dark_cyan;
+    color: v.$white;
+    &:hover {
+        background-color: v.$cyan;
+        color: v.$blalck;
+    }
+    
+}

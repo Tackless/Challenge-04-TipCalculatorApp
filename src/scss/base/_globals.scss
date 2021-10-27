@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: v.$font_main;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    background-color: v.$light_grayish_cyan;
+    color: v.$dark_grayish_cyan;
+    h1 {
+        color: v.$very_dark_cyan;
+        text-transform: uppercase;
+        letter-spacing: 0.6rem;
+        text-align: center;
+        margin: 5rem 0;
+        line-height: 2.8rem;
+    }
+}
+.container {
+    width: 95%;
+    background-color: v.$white;
+    max-width: 80rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+    padding: 4rem;
+    @include m.desktop {
+        @include m.grid(2,0);
+    } 
+}
+input {
+    font-weight: 700;
+    border-style: none;
+    text-align: right;
+    background-color: v.$grayish_cyan;
+    font-size: 2rem;
+    color: v.$very_dark_cyan;
+    outline: none;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+    }
+}
+.attribution {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    a {
+        text-decoration: none;
+        color: v.$strong_cyan;
+    }
+}

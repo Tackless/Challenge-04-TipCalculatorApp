@@ -1,0 +1,14 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.input {
+    background-color: v.$grayish_cyan;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 30rem;
+    
+    &:hover {
+        border: .1rem solid v.$strong_cyan;
+    }
+}
+
